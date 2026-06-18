@@ -191,7 +191,7 @@ async function loadProjects(filter="all"){
             progressColor="bg-success";
         }
         else if(project.ProjectStatus === "InProgress"){
-            progress=60; 
+            progress=40; 
             progressColor="bg-warning"; 
         }
         else if(project.ProjectStatus === "Not Yet Started"){
