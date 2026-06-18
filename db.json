@@ -1,0 +1,111 @@
+{
+  "employees": [
+    {
+      "EmployeeID": "1001",
+      "Fullname": "Admin",
+      "Email": "admin",
+      "Phone": "9876543210",
+      "JoinedDate": "2026-06-01",
+      "Department": "Administration",
+      "Designation": "Administrator",
+      "Password": "admin123",
+      "Role": "Admin",
+      "id": "admin001"
+    },
+    {
+      "EmployeeID": "4005",
+      "Fullname": "Sindhuja",
+      "Email": "sindhujas388@gmail.com",
+      "Phone": "6384612345",
+      "JoinedDate": "2026-06-13",
+      "Department": "FrontEndDevelopment",
+      "Designation": "Developer",
+      "Password": "11!!aaAA",
+      "Role": "Employee",
+      "id": "RtDr_sQgnAU"
+    },
+    {
+      "EmployeeID": "4007",
+      "Fullname": "Danusree",
+      "Email": "danu@gmail.com",
+      "Phone": "9876543201",
+      "JoinedDate": "2026-06-11",
+      "Department": "BackEndDevelopment",
+      "Designation": "BackendDeveloper",
+      "Password": "11!!aaAA",
+      "Role": "Employee",
+      "id": "inuWrAdSRd8"
+    },
+    {
+      "EmployeeID": "4009",
+      "Fullname": "Kavya",
+      "Email": "kavya@gmail.com",
+      "Phone": "1234567890",
+      "JoinedDate": "2026-06-06",
+      "Department": "FullStackDevelopment",
+      "Designation": "FullStackDeveloper",
+      "Password": "11!!aaAA",
+      "Role": "Employee",
+      "id": "37EcVtnlvOU"
+    }
+  ],
+  "projects": [
+    {
+      "ProjectID": "PRJ001",
+      "ProjectName": "Student Management System",
+      "ProjectDescription": "ssms",
+      "StartDate": "2026-06-16",
+      "EndDate": "2026-06-20",
+      "Department": "FrontEndDevelopment",
+      "AssignedEmployee": "4005",
+      "ProjectStatus": "Completed",
+      "Remarks": "create login and Authentication module",
+      "isDeleted": false,
+      "IsViewed": true,
+      "id": "TnTZ5V6xH9M"
+    },
+    {
+      "ProjectID": "PRJ002",
+      "ProjectName": "Project Assignment System",
+      "ProjectDescription": "Admin should assign project and track the status of project.Employees can update status",
+      "StartDate": "2026-06-17",
+      "EndDate": "2026-06-30",
+      "Department": "FrontEndDevelopment",
+      "AssignedEmployee": "4005",
+      "ProjectStatus": "Not Yet Started",
+      "Remarks": "Design 5 Modules[Landing ,login,signup,admin dashboard,employee dashboard]",
+      "isDeleted": false,
+      "IsViewed": true,
+      "id": "FcKBung5Qso"
+    },
+    {
+      "ProjectID": "PRJ003",
+      "ProjectName": "Library Management System",
+      "ProjectDescription": "Student can borrow amd return the books using user Friendly UI.",
+      "StartDate": "2026-06-18",
+      "EndDate": "2026-06-30",
+      "Department": "FrontEndDevelopment",
+      "AssignedEmployee": "4005",
+      "ProjectStatus": "Not Yet Started",
+      "Remarks": "create modules for student,login,signup and admin",
+      "isDeleted": false,
+      "IsViewed": true,
+      "id": "wuSXXTVjfM8"
+    },
+    {
+      "ProjectID": "PRJ004",
+      "ProjectName": "Leave Management System",
+      "ProjectDescription": "Employees will request for leave , admin will approves or declines the request",
+      "StartDate": "2026-06-18",
+      "EndDate": "2026-06-26",
+      "Department": "BackEndDevelopment",
+      "AssignedEmployee": "4007",
+      "ProjectStatus": "Not Yet Started",
+      "Remarks": "Project for employees",
+      "isDeleted": false,
+      "IsViewed": true,
+      "id": "FJLs8SsR1BQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

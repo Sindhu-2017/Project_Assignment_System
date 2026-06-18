@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family:"Poppins",sans-serif;
+    min-height:100vh;
+    padding-top:90px;
+
+    background:linear-gradient(
+        -45deg,
+        #f3e8ff,
+        #ede9fe,
+        #faf5ff,
+        #e9d5ff
+    );
+
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+#navContainer{
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #a855f7
+    );
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+
+    box-shadow:0 5px 20px rgba(139,92,246,.25);
+}
+
+#navContainer .navbar-brand,.nav-link{
+    color:white;
+    font-weight:bold;
+}
+.navbar{
+    min-height:70px;
+}
+.btn-purple{
+    background:#6f42c1;
+    color: white;
+}
+#pillsContainer{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+
+#pillsContainer .nav{
+    background:white;
+    padding:10px;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+
+    width:fit-content;
+    max-width:100%;
+}
+
+#pillsContainer .nav-link{
+    color:#555;
+    background:#f3e8ff;
+    font-weight:600;
+    border-radius:12px;
+    padding:12px 22px;
+    transition:0.3s;
+}
+
+#pillsContainer .nav-link:hover{
+    background:white;
+}
+
+#pillsContainer .nav-link.active{
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #a855f7
+    ) !important;
+
+    color:white !important;
+}
+
+.input-group-text{
+    background:linear-gradient(
+        180deg,
+        #8b5cf6,
+        #a855f7
+    );
+
+    color:white;
+    border:none;
+}
+#taskContainer{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    padding:20px;
+    margin-top:40px;
+}
+
+.project-card{
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(10px);
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.project-header{
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #a855f7
+    );
+
+    color:white;
+    padding:14px 18px;
+}
+
+.card-body{
+    padding:20px !important;
+    flex:1;
+}
+
+.card-title{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.card-body p:first-of-type{
+    min-height:40px;
+}
+.card-body p{
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.project-dates{
+    font-size:14px;
+    font-weight:500;
+    color:#475569;
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid #e5e7eb;
+}
+
+.progress{
+    height:10px;
+    margin-top:auto !important;
+}
+
+.card-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    margin-top:15px;
+}
+.badge-completed{
+    background:#d1fae5;
+    color:#065f46;
+}
+.badge-notstarted{
+    background:#e0e7ff;
+    color:#3730a3;
+}
+.badge-progress{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.badge-overdue{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+.dark-mode{
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    ) !important;
+    color:white;
+}
+
+/* .remarks-box{
+    background:#f8f5ff;
+    border-left:4px solid #6f42c1;
+    padding:12px;
+    border-radius:10px;
+    margin:12px 0;
+    font-size:16px;
+}
+
+.dark-mode .remarks-box{
+    background:#334155;
+    color:white;
+    border-left-color:#8b5cf6;
+} */
+.dark-mode #navContainer{
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(10px);
+}
+
+.dark-mode .navbar-brand{
+    color:white !important;
+}
+
+.dark-mode .offcanvas{
+    background:#1e293b;
+    color:white;
+}
+
+.dark-mode .offcanvas hr{
+    border-color:#475569;
+}
+
+.dark-mode .filter-container{
+    background:#1e293b;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.dark-mode .filter-item label{
+    color:#e2e8f0;
+}
+
+.dark-mode .form-control{
+    background:#334155;
+    color:white;
+    border:1px solid #475569;
+}
+
+.dark-mode .form-control:focus{
+    background:#334155;
+    color:white;
+    border-color:#8b5cf6;
+}
+
+.dark-mode .input-group-text{
+    background:#7c3aed;
+    color:white;
+    border:none;
+}
+
+.dark-mode #pillsContainer .nav{
+    background:#1e293b;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.dark-mode #pillsContainer .nav-link{
+    background:#334155;
+    color:#cbd5e1;
+}
+
+.dark-mode #pillsContainer .nav-link.active{
+    background:#7c3aed !important;
+    color:white !important;
+}
+
+.dark-mode .project-card{
+    background:#1e293b;
+    color:white;
+    border:1px solid #334155;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.dark-mode .project-header{
+    background:linear-gradient(
+        135deg,
+        #7c3aed,
+        #9333ea
+    );
+}
+
+.dark-mode .card-body p{
+    color:#e2e8f0;
+}
+
+.dark-mode .project-dates{
+    border-top:1px solid #475569;
+}
+
+.dark-mode .progress{
+    background:#334155;
+}
+
+.dark-mode #themeToggle{
+    background:#334155;
+    color:white;
+    border:none;
+}
+
+.filter-container{
+    width:95%;
+    max-width:1300px;
+    margin:20px auto;
+
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(10px);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(139,92,246,.12);
+
+    display:grid;
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        auto;
+
+    gap:15px;
+    align-items:end;
+}
+.filter-item{
+    flex:1;
+}
+
+.filter-item label{
+    display:block;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#555;
+}
+
+.filter-item .form-control{
+    height:45px;
+    border-radius:10px;
+}
+
+.clear-btn{
+    height:45px;
+    padding:0 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#8b5cf6;
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.clear-btn:hover{
+    background:#7c3aed;
+}
+@keyframes blinkTask{
+
+    0%,100%{
+        transform:scale(1);
+        box-shadow:
+            0 0 10px #ff4d4d,
+            0 0 20px #ff4d4d;
+    }
+
+    50%{
+        transform:scale(1.03);
+        box-shadow:
+            0 0 25px #ff0000,
+            0 0 50px #ff0000,
+            0 0 70px #ff0000;
+    }
+}
+
+.new-task-blink{
+    animation: blinkTask 1s infinite;
+}
+.pagination .page-item.active .page-link{
+    background:#8b5cf6;
+    border-color:#8b5cf6;
+    color:white;
+}
+
+.pagination .page-link{
+    color:#8b5cf6;
+}
+
+.pagination .page-link:hover{
+    color: #6f42c1;
+}
+
+#themeToggle{
+    background:white;
+    color:#8b5cf6;
+
+    border:none;
+
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    background:#8b5cf6;
+    color:white;
+    transform:rotate(180deg);
+}
+
+@media (max-width:768px){
+
+    #taskContainer{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        width:100%;
+    }
+
+    .card-title{
+        font-size:18px;
+    }
+
+    .project-dates{
+        flex-direction:column;
+        gap:10px !important;
+    }
+
+    .project-dates span{
+        display:block;
+    }
+}
+/* TABLET*/
+
+@media (max-width:992px){
+
+    .filter-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #taskContainer{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    #pillsContainer .nav{
+        width:100%;
+        justify-content:center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .navbar-brand{
+        font-size:1.2rem !important;
+        margin-left:0 !important;
+    }
+
+    #adminNav .navbar-nav{
+        align-items:center;
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .filter-container{
+        grid-template-columns:1fr;
+        width:95%;
+        padding:15px;
+    }
+
+    .clear-btn{
+        width:100%;
+    }
+
+    #pillsContainer .nav{
+        width:100%;
+        flex-direction:column;
+    }
+
+    #pillsContainer .nav-link{
+        width:100%;
+        text-align:center;
+    }
+
+    #taskContainer{
+        grid-template-columns:1fr;
+        width:100%;
+        padding:15px;
+    }
+
+    .project-card{
+        width:100%;
+    }
+
+    .project-dates{
+        flex-direction:column;
+        gap:10px !important;
+    }
+
+    .project-dates span{
+        display:block;
+    }
+
+    .offcanvas{
+        width:85% !important;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width:576px){
+
+    .card-title{
+        font-size:18px;
+    }
+
+    .card-body{
+        padding:15px !important;
+    }
+
+    .card-body p{
+        font-size:14px;
+    }
+
+    .project-dates{
+        font-size:14px;
+    }
+
+    .badge{
+        font-size:11px;
+    }
+
+    .offcanvas{
+        width:100% !important;
+    }
+}

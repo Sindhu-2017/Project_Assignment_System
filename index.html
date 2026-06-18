@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container-fluid" id="navContainer">
+        <nav class="navbar navbar-expand-lg" id="navIndex">
+            <a class="navbar-brand"><i class="bi bi-file-code"></i>  ProjectFlow</a>
+            <button class="navbar-toggler" data-bs-target="#myNav" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav ms-auto">
+                    
+                    <li class="nav-item ms-2"><a class="nav-link text-center" href="pages/signup.html" id="signupBtn">Signup</a></li>
+
+                    <li class="nav-item ms-2"><a class="nav-link text-center" href="pages/login.html" id="loginBtn">Login</a></li>
+
+                    <li class="nav-item"><button class="btn"><i class="bi bi-moon-fill p-2" id="themeBtn"></i></button></li>
+                </ul>                
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" id="hero-section">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 ">
+                <h1 class="display-4 fw-bold" id="hero-title"><i class="bi bi-file-code"></i> PROJECT ASSIGNMENT SYSTEM</h1>
+                <p class="lead">Manage Employees & Projects Efficiently</p>
+            </div>
+            <div class="col-12 col-md-6" id="floating-img">
+                <img src="assets/download.png" class="img-fluid">                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="card-title fs-5"><i class="bi bi-kanban-fill me-2"></i> Project Assignment</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Assign projects to employees with ease.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="card-title fs-5"><i class="bi bi-clock-history me-2"></i> Deadline Tracking</h4>
+
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Monitor project deadlines and milestones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="card-title fs-5"> <i class="bi bi-person-lock me-2 "></i>Secure Access</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Role-based login for Admin and Employees.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 mb-4">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4 class="card-title fs-5"><i class="bi bi-person-workspace me-2"></i> Employee Management</h4>
+                    </div>
+                    <div class="card-body text-center">
+                        <p>Manage employee information and project allocation.</p>
+                    </div>
+                </div>
+            </div>       
+        </div>     
+    </div>
+
+
+    <footer class="mt-5 text-center">
+        <i class="bi bi-c-circle"></i>  2026 ProjectFlow | Project Assignment System
+    </footer>
+
+    <!-- theme  -->
+    <script>
+    const themeBtn = document.getElementById("themeBtn");
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if(savedTheme === "dark"){
+        document.body.classList.add("dark-mode");
+        themeBtn.classList.remove("bi-moon-fill");
+        themeBtn.classList.add("bi-sun-fill");
+    }
+
+    themeBtn.addEventListener("click",()=>{
+
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+            localStorage.setItem("theme","dark");
+            themeBtn.classList.remove("bi-moon-fill");
+            themeBtn.classList.add("bi-sun-fill");
+        }
+        else{
+            localStorage.setItem("theme","light");
+            themeBtn.classList.remove("bi-sun-fill");
+            themeBtn.classList.add("bi-moon-fill");
+        }
+
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+</body>
+</html>
