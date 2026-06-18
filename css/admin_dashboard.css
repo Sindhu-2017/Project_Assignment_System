@@ -10,7 +10,6 @@ body{
         #faf5ff,
         #e9d5ff
     );
-
     background-size:400% 400%;
     animation:gradientMove 12s ease infinite;
 }
